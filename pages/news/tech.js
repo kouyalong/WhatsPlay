@@ -12,7 +12,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    that.loadMovieNews()
   },
 
   /**
@@ -62,5 +63,24 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  /**
+  * 加载 
+  */
+  loadMovieNews: function () {
+    var that = this
+    var utilObj = require("../../utils/util.js")
+    var city = "北京"
+    var newsPage = 1
+    var newsType = "news_hot"
+    utilObj.loadNews(newsType, newsPage, city, that)
+  },
+
+  onTapNews: function (event) {
+
+    var that = this
+    var utilObj = require("../../utils/util.js")
+    utilObj.loadNewsDetail(event.currentTarget.dataset.newsGID, event.currentTarget.dataset.newsGRC, that)
   }
 })

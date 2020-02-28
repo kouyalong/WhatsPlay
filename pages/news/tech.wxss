@@ -1,1 +1,67 @@
 /* pages/news/tech.wxss */
+
+.category-wrapper{
+    display: flex;
+    margin-bottom: 0rpx;
+    background-color: #B0C4DE;
+    text-align: center;
+    padding-left: 18rpx;
+    top: 0%;
+    width: 100%;
+    height: 64rpx;
+}
+
+.category-item{
+    width: 90rpx;
+    margin: 30rpx;
+    text-align: center;  
+}
+
+.category-tab{  
+    color: #555555;
+}
+
+.category-tab.active{  
+    color: #000000;
+    font-weight: 600;
+}
+
+
+.news-wrapper{
+    display: flex;
+    border-bottom: 3rpx solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 20rpx;
+    margin: 20rpx 20rpx 30rpx;
+    height: 400rpx;
+}
+
+.news-wrapper .text{
+    width: 2000rpx;
+    position: relative;
+    margin-left: 30rpx;
+}
+
+.news-wrapper .title{
+    font-size: 30rpx;
+}
+
+.news-wrapper .info{
+    margin-top: 8rpx;
+    display: flex;
+    font-size: 20rpx;
+    opacity: 0.6;
+    margin-bottom: 3rpx;
+    position: absolute;
+    bottom: 0rpx;
+}
+
+.news-wrapper .time{
+    margin-right: 30rpx;
+    font-size: 20rpx;
+}
+
+.news-wrapper .img{
+    margin: 10rpx;
+    height: 320rpx;
+    width: 480rpx
+}

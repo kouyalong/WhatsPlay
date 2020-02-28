@@ -1,2 +1,24 @@
 <!--pages/news/tech.wxml-->
-<text>pages/news/tech.wxml</text>
+
+<view class="category">
+</view>
+
+
+<scroll-view scroll-y="true">
+  <view class="news-list">
+    <view class="news-item" wx:key="unique" wx:for="{{news}}">
+      <view class="news-wrapper" bindtap="onTapNews" data-newsGID="{{item.group_id}}" data-newGRC="{{item.group_source}}">
+        <view class="text">
+          <view class="title">{{item.title}}</view>
+          <view class="info">
+            <view class="time">{{item.publish_time}}</view>
+            <view class="source">{{item.media_name}}</view>
+          </view>
+        </view>
+
+        <image class="img" src="{{item.share_info.weixin_cover_image.url}}">
+        </image>
+      </view>
+    </view>
+  </view>
+</scroll-view>
